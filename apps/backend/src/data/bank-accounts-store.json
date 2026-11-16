@@ -1,0 +1,883 @@
+{
+  "accounts": [
+    {
+      "id": "bank_acc_hdfc_shared",
+      "accountNumber": "50100492817264",
+      "bankName": "HDFC Bank",
+      "ifscCode": "HDFC0001234",
+      "accountHolderName": "Acme Corp Field Float",
+      "bankUsername": "emp_user",
+      "bankPassword": "emp_password_123",
+      "tags": [
+        "Primary Salary"
+      ],
+      "createdAt": "2026-11-12T12:20:49.276Z",
+      "updatedAt": "2026-11-12T22:04:31.771Z",
+      "tagLogs": [
+        {
+          "tag": "Primary Salary",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T22:04:31.771Z"
+        },
+        {
+          "tag": "asdasd (UPI Exhausted)",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T22:04:21.794Z"
+        },
+        {
+          "tag": "asdasdas",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "testiog",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "asdasd",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "asdasdasa",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:25:41.105Z"
+        },
+        {
+          "tag": "ASDAadad",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T20:43:16.425Z"
+        },
+        {
+          "tag": "ASDASD,",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T20:39:23.801Z"
+        },
+        {
+          "tag": "ASDASDASD",
+          "addedByUserId": "25ab18e7-7723-4a3f-9b98-766edc56960d",
+          "addedByName": "Alexander Wright",
+          "addedByRole": "SUPER_ADMIN",
+          "addedAt": "2026-11-12T20:34:33.204Z"
+        }
+      ],
+      "isUpiActive": true,
+      "upiStatus": "ACTIVE"
+    },
+    {
+      "id": "bank_acc_sbi_primary",
+      "accountNumber": "98765432101234",
+      "bankName": "State Bank of India",
+      "ifscCode": "SBIN0001234",
+      "accountHolderName": "Rahul Sharma",
+      "bankUsername": "rahul_sbi_ops",
+      "bankPassword": "Sbi@Pass!9921",
+      "tags": [
+        "testing"
+      ],
+      "createdAt": "2026-11-12T12:20:49.276Z",
+      "updatedAt": "2026-11-12T20:20:34.348Z",
+      "tagLogs": [
+        {
+          "tag": "testing",
+          "addedByUserId": "25ab18e7-7723-4a3f-9b98-766edc56960d",
+          "addedByName": "Alexander Wright",
+          "addedByRole": "SUPER_ADMIN",
+          "addedAt": "2026-11-12T20:20:34.348Z"
+        }
+      ]
+    },
+    {
+      "id": "bank_acc_icici_transit",
+      "accountNumber": "10293847561029",
+      "bankName": "ICICI Bank",
+      "ifscCode": "ICIC0001029",
+      "accountHolderName": "Emergency Highway Float",
+      "bankUsername": "transit_icici_01",
+      "bankPassword": "Icici#Transit$88",
+      "tags": [
+        "Emergency Float",
+        "Transit",
+        "Fuel"
+      ],
+      "createdAt": "2026-11-12T12:20:49.276Z",
+      "updatedAt": "2026-11-12T12:20:49.276Z"
+    },
+    {
+      "id": "acc_432d4461-b6fd-4275-a2e0-b716df8d598f",
+      "accountNumber": "asdasd123123",
+      "bankName": "HDFC Bank",
+      "ifscCode": "HDFC0001248",
+      "accountHolderName": "asdasdasd",
+      "bankUsername": "asdasd",
+      "bankPassword": "asdasd",
+      "tags": [],
+      "isUpiActive": true,
+      "upiStatus": "ACTIVE",
+      "createdAt": "2026-11-12T20:22:10.901Z",
+      "updatedAt": "2026-11-12T20:22:10.901Z"
+    }
+  ],
+  "assignments": [
+    {
+      "id": "asgn_1",
+      "employeeId": "default",
+      "bankAccountId": "bank_acc_hdfc_shared",
+      "isPrimary": true,
+      "customTags": [
+        "Primary Salary"
+      ],
+      "assignedAt": "2026-11-12T12:20:49.276Z",
+      "tagLogs": [
+        {
+          "tag": "Primary Salary",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T22:04:31.771Z"
+        },
+        {
+          "tag": "asdasd (UPI Exhausted)",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T22:04:21.794Z"
+        },
+        {
+          "tag": "asdasdas",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "testiog",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "asdasd",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "asdasdasa",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:25:41.105Z"
+        },
+        {
+          "tag": "ASDAadad",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T20:43:16.425Z"
+        },
+        {
+          "tag": "ASDASD,",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T20:39:23.801Z"
+        },
+        {
+          "tag": "ASDASDASD",
+          "addedByUserId": "25ab18e7-7723-4a3f-9b98-766edc56960d",
+          "addedByName": "Alexander Wright",
+          "addedByRole": "SUPER_ADMIN",
+          "addedAt": "2026-11-12T20:34:33.204Z"
+        }
+      ]
+    },
+    {
+      "id": "asgn_2",
+      "employeeId": "default",
+      "bankAccountId": "bank_acc_sbi_primary",
+      "isPrimary": false,
+      "customTags": [
+        "Salary Account",
+        "testing"
+      ],
+      "assignedAt": "2026-11-12T12:20:49.276Z",
+      "tagLogs": [
+        {
+          "tag": "testing",
+          "addedByUserId": "25ab18e7-7723-4a3f-9b98-766edc56960d",
+          "addedByName": "Alexander Wright",
+          "addedByRole": "SUPER_ADMIN",
+          "addedAt": "2026-11-12T20:20:34.348Z"
+        }
+      ]
+    },
+    {
+      "id": "asgn_0b5a9e01-a9ac-4b54-a10e-80410317924b",
+      "employeeId": "e98d9a46-e3b6-4f34-a96c-bb5b6f09df93",
+      "bankAccountId": "bank_acc_hdfc_shared",
+      "isPrimary": true,
+      "customTags": [
+        "Primary Salary"
+      ],
+      "assignedAt": "2026-11-12T19:28:51.605Z",
+      "tagLogs": [
+        {
+          "tag": "Primary Salary",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T22:04:31.771Z"
+        },
+        {
+          "tag": "asdasd (UPI Exhausted)",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T22:04:21.794Z"
+        },
+        {
+          "tag": "asdasdas",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "testiog",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "asdasd",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "asdasdasa",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:25:41.105Z"
+        },
+        {
+          "tag": "ASDAadad",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T20:43:16.425Z"
+        },
+        {
+          "tag": "ASDASD,",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T20:39:23.801Z"
+        },
+        {
+          "tag": "ASDASDASD",
+          "addedByUserId": "25ab18e7-7723-4a3f-9b98-766edc56960d",
+          "addedByName": "Alexander Wright",
+          "addedByRole": "SUPER_ADMIN",
+          "addedAt": "2026-11-12T20:34:33.204Z"
+        }
+      ]
+    },
+    {
+      "id": "asgn_6727c7d4-2639-45c6-add7-8ade13705cb3",
+      "employeeId": "fb8ff307-2c9f-4524-83ac-4a71e46235bf",
+      "bankAccountId": "bank_acc_hdfc_shared",
+      "isPrimary": true,
+      "customTags": [
+        "Primary Salary"
+      ],
+      "assignedAt": "2026-11-12T19:28:51.609Z",
+      "tagLogs": [
+        {
+          "tag": "Primary Salary",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T22:04:31.771Z"
+        },
+        {
+          "tag": "asdasd (UPI Exhausted)",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T22:04:21.794Z"
+        },
+        {
+          "tag": "asdasdas",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "testiog",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "asdasd",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "asdasdasa",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:25:41.105Z"
+        },
+        {
+          "tag": "ASDAadad",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T20:43:16.425Z"
+        },
+        {
+          "tag": "ASDASD,",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T20:39:23.801Z"
+        },
+        {
+          "tag": "ASDASDASD",
+          "addedByUserId": "25ab18e7-7723-4a3f-9b98-766edc56960d",
+          "addedByName": "Alexander Wright",
+          "addedByRole": "SUPER_ADMIN",
+          "addedAt": "2026-11-12T20:34:33.204Z"
+        }
+      ]
+    },
+    {
+      "id": "asgn_b2ab9d24-337a-48bd-b501-b168a5198e0c",
+      "employeeId": "02ab6fff-88cf-4cb8-badc-bb0eca09152a",
+      "bankAccountId": "bank_acc_hdfc_shared",
+      "isPrimary": true,
+      "customTags": [
+        "Primary Salary"
+      ],
+      "assignedAt": "2026-11-12T19:28:51.618Z",
+      "tagLogs": [
+        {
+          "tag": "Primary Salary",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T22:04:31.771Z"
+        },
+        {
+          "tag": "asdasd (UPI Exhausted)",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T22:04:21.794Z"
+        },
+        {
+          "tag": "asdasdas",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "testiog",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "asdasd",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "asdasdasa",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:25:41.105Z"
+        },
+        {
+          "tag": "ASDAadad",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T20:43:16.425Z"
+        },
+        {
+          "tag": "ASDASD,",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T20:39:23.801Z"
+        },
+        {
+          "tag": "ASDASDASD",
+          "addedByUserId": "25ab18e7-7723-4a3f-9b98-766edc56960d",
+          "addedByName": "Alexander Wright",
+          "addedByRole": "SUPER_ADMIN",
+          "addedAt": "2026-11-12T20:34:33.204Z"
+        }
+      ]
+    },
+    {
+      "id": "asgn_5d92bfa9-ee82-4226-8b2b-51d1ec4e06b4",
+      "employeeId": "29e5b4d0-9c23-4b59-a87d-e9292c59339b",
+      "bankAccountId": "bank_acc_hdfc_shared",
+      "isPrimary": true,
+      "customTags": [
+        "Primary Salary"
+      ],
+      "assignedAt": "2026-11-12T19:28:51.627Z",
+      "tagLogs": [
+        {
+          "tag": "Primary Salary",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T22:04:31.771Z"
+        },
+        {
+          "tag": "asdasd (UPI Exhausted)",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T22:04:21.794Z"
+        },
+        {
+          "tag": "asdasdas",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "testiog",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "asdasd",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "asdasdasa",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:25:41.105Z"
+        },
+        {
+          "tag": "ASDAadad",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T20:43:16.425Z"
+        },
+        {
+          "tag": "ASDASD,",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T20:39:23.801Z"
+        },
+        {
+          "tag": "ASDASDASD",
+          "addedByUserId": "25ab18e7-7723-4a3f-9b98-766edc56960d",
+          "addedByName": "Alexander Wright",
+          "addedByRole": "SUPER_ADMIN",
+          "addedAt": "2026-11-12T20:34:33.204Z"
+        }
+      ]
+    },
+    {
+      "id": "asgn_453ff22f-df44-43cf-af46-1235abfb13aa",
+      "employeeId": "059cdab3-4f7f-493f-9e16-6585281c5f22",
+      "bankAccountId": "bank_acc_hdfc_shared",
+      "isPrimary": true,
+      "customTags": [
+        "Primary Salary"
+      ],
+      "assignedAt": "2026-11-12T19:28:51.637Z",
+      "tagLogs": [
+        {
+          "tag": "Primary Salary",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T22:04:31.771Z"
+        },
+        {
+          "tag": "asdasd (UPI Exhausted)",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T22:04:21.794Z"
+        },
+        {
+          "tag": "asdasdas",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "testiog",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "asdasd",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "asdasdasa",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:25:41.105Z"
+        },
+        {
+          "tag": "ASDAadad",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T20:43:16.425Z"
+        },
+        {
+          "tag": "ASDASD,",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T20:39:23.801Z"
+        },
+        {
+          "tag": "ASDASDASD",
+          "addedByUserId": "25ab18e7-7723-4a3f-9b98-766edc56960d",
+          "addedByName": "Alexander Wright",
+          "addedByRole": "SUPER_ADMIN",
+          "addedAt": "2026-11-12T20:34:33.204Z"
+        }
+      ]
+    },
+    {
+      "id": "asgn_7d2e82e7-a8e5-4a84-9717-5a278ab03128",
+      "employeeId": "9a946413-312a-4774-921d-240d85a75837",
+      "bankAccountId": "bank_acc_hdfc_shared",
+      "isPrimary": true,
+      "customTags": [
+        "Primary Salary"
+      ],
+      "assignedAt": "2026-11-12T19:28:51.645Z",
+      "tagLogs": [
+        {
+          "tag": "Primary Salary",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T22:04:31.771Z"
+        },
+        {
+          "tag": "asdasd (UPI Exhausted)",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T22:04:21.794Z"
+        },
+        {
+          "tag": "asdasdas",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "testiog",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "asdasd",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "asdasdasa",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:25:41.105Z"
+        },
+        {
+          "tag": "ASDAadad",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T20:43:16.425Z"
+        },
+        {
+          "tag": "ASDASD,",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T20:39:23.801Z"
+        },
+        {
+          "tag": "ASDASDASD",
+          "addedByUserId": "25ab18e7-7723-4a3f-9b98-766edc56960d",
+          "addedByName": "Alexander Wright",
+          "addedByRole": "SUPER_ADMIN",
+          "addedAt": "2026-11-12T20:34:33.204Z"
+        }
+      ]
+    },
+    {
+      "id": "asgn_43f51dd2-89fb-4389-9c73-3fb82e8e8941",
+      "employeeId": "abec204b-56a9-4ff5-a08d-7021feb2b639",
+      "bankAccountId": "bank_acc_hdfc_shared",
+      "isPrimary": true,
+      "customTags": [
+        "Primary Salary"
+      ],
+      "assignedAt": "2026-11-12T19:28:51.655Z",
+      "tagLogs": [
+        {
+          "tag": "Primary Salary",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T22:04:31.771Z"
+        },
+        {
+          "tag": "asdasd (UPI Exhausted)",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T22:04:21.794Z"
+        },
+        {
+          "tag": "asdasdas",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "testiog",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "asdasd",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "asdasdasa",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:25:41.105Z"
+        },
+        {
+          "tag": "ASDAadad",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T20:43:16.425Z"
+        },
+        {
+          "tag": "ASDASD,",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T20:39:23.801Z"
+        },
+        {
+          "tag": "ASDASDASD",
+          "addedByUserId": "25ab18e7-7723-4a3f-9b98-766edc56960d",
+          "addedByName": "Alexander Wright",
+          "addedByRole": "SUPER_ADMIN",
+          "addedAt": "2026-11-12T20:34:33.204Z"
+        }
+      ]
+    },
+    {
+      "id": "asgn_4bdc8b7b-5801-45cf-97c2-db38e5ecbeae",
+      "employeeId": "e98d9a46-e3b6-4f34-a96c-bb5b6f09df93",
+      "bankAccountId": "bank_acc_sbi_primary",
+      "isPrimary": false,
+      "customTags": [
+        "Shared Operations",
+        "testing"
+      ],
+      "assignedAt": "2026-11-12T19:29:38.201Z",
+      "tagLogs": [
+        {
+          "tag": "testing",
+          "addedByUserId": "25ab18e7-7723-4a3f-9b98-766edc56960d",
+          "addedByName": "Alexander Wright",
+          "addedByRole": "SUPER_ADMIN",
+          "addedAt": "2026-11-12T20:20:34.348Z"
+        }
+      ]
+    },
+    {
+      "id": "asgn_dff40478-3d42-49ed-beee-a612182240c9",
+      "employeeId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+      "bankAccountId": "bank_acc_hdfc_shared",
+      "isPrimary": true,
+      "customTags": [
+        "Primary Salary"
+      ],
+      "assignedAt": "2026-11-12T19:34:03.409Z",
+      "tagLogs": [
+        {
+          "tag": "Primary Salary",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T22:04:31.771Z"
+        },
+        {
+          "tag": "asdasd (UPI Exhausted)",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T22:04:21.794Z"
+        },
+        {
+          "tag": "asdasdas",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "testiog",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "asdasd",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:48:12.587Z"
+        },
+        {
+          "tag": "asdasdasa",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T21:25:41.105Z"
+        },
+        {
+          "tag": "ASDAadad",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T20:43:16.425Z"
+        },
+        {
+          "tag": "ASDASD,",
+          "addedByUserId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+          "addedByName": "teateasdasda",
+          "addedByRole": "EMPLOYEE",
+          "addedAt": "2026-11-12T20:39:23.801Z"
+        },
+        {
+          "tag": "ASDASDASD",
+          "addedByUserId": "25ab18e7-7723-4a3f-9b98-766edc56960d",
+          "addedByName": "Alexander Wright",
+          "addedByRole": "SUPER_ADMIN",
+          "addedAt": "2026-11-12T20:34:33.204Z"
+        }
+      ]
+    },
+    {
+      "id": "asgn_sbi_90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+      "employeeId": "90cda0fe-af88-4a4a-b35d-7f5ae56808e4",
+      "bankAccountId": "bank_acc_sbi_primary",
+      "isPrimary": false,
+      "customTags": [
+        "Shared Operations",
+        "testing"
+      ],
+      "assignedAt": "2026-11-12T19:34:03.409Z",
+      "tagLogs": [
+        {
+          "tag": "testing",
+          "addedByUserId": "25ab18e7-7723-4a3f-9b98-766edc56960d",
+          "addedByName": "Alexander Wright",
+          "addedByRole": "SUPER_ADMIN",
+          "addedAt": "2026-11-12T20:20:34.348Z"
+        }
+      ]
+    },
+    {
+      "id": "asgn_80d31bde-0950-46fc-adb6-efff049c0897",
+      "employeeId": "e98d9a46-e3b6-4f34-a96c-bb5b6f09df93",
+      "bankAccountId": "acc_432d4461-b6fd-4275-a2e0-b716df8d598f",
+      "isPrimary": false,
+      "customTags": [],
+      "assignedAt": "2026-11-12T20:22:10.903Z"
+    }
+  ]
+}

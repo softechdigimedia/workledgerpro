@@ -1,0 +1,25 @@
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
+
+# Run and deploy your AI Studio app
+
+This contains everything you need to run your app locally.
+
+View your app in AI Studio: https://ai.studio/apps/1d2ed899-aec0-4884-86f5-f4b2cdcdd284
+
+## Run Locally
+
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
+
+
+## Supabase-backed API configuration
+
+The Admin Web uses the WorkLedger Express REST API; it must not call Supabase PostgREST tables directly. Copy `.env.example` to `.env.production` and set `VITE_API_BASE_URL` to the deployed API URL ending in `/api/v1` (for example `https://api.example.com/api/v1`). Supabase database credentials remain backend-only. See the repository-level `SUPABASE_MIGRATION_MAP.md`.
