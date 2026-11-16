@@ -228,11 +228,11 @@ class BankAccountStore {
     accountNumber: string;
     bankName: string;
     ifscCode: string;
-    accountHolderName?: string;
-    employeeAccount?: string;
-    bankUsername?: string;
-    bankPassword?: string;
-    tags?: string[];
+    accountHolderName?: string | undefined;
+    employeeAccount?: string | undefined;
+    bankUsername?: string | undefined;
+    bankPassword?: string | undefined;
+    tags?: string[] | undefined;
   }): BankAccountRecord {
     const existing = this.findByAccountNumber(params.accountNumber);
     if (existing) {

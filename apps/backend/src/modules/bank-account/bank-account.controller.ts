@@ -98,8 +98,12 @@ export const addOrAssignBankAccount: RequestHandler = async (req:any, res:any, n
         ifscCode: String(ifscCode).trim().toUpperCase(),
         accountHolderName: incomingHolder,
         employeeAccount: incomingHolder,
-        bankUsername: bankUsername ? String(bankUsername).trim() : undefined,
-        bankPassword: bankPassword ? String(bankPassword).trim() : undefined,
+    ...(bankUsername
+  ? { bankUsername: String(bankUsername).trim() }
+  : {}),
+...(bankPassword
+  ? { bankPassword: String(bankPassword).trim() }
+  : {}),
         tags: allTags,
       });
 

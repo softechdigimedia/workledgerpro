@@ -9,7 +9,15 @@ export function getIstDateString(value = new Date()): string {
 export function getIstDayRange(date?: string): IstDayRange {
   const selected = date || getIstDateString();
   if (!/^\d{4}-\d{2}-\d{2}$/.test(selected)) throw new Error("Date must be YYYY-MM-DD");
-  const [year, month, day] = selected.split("-").map(Number);
+  const parts = selected.split("-");
+
+if (parts.length !== 3) {
+  throw new Error("Date must be YYYY-MM-DD");
+}
+
+const year = Number(parts[0]);
+const month = Number(parts[1]);
+const day = Number(parts[2]);
   const check = new Date(Date.UTC(year, month - 1, day));
   if (check.getUTCFullYear() !== year || check.getUTCMonth() !== month - 1 || check.getUTCDate() !== day) throw new Error("Date is invalid");
   const start = new Date(`${selected}T00:00:00+05:30`);

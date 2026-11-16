@@ -299,11 +299,12 @@ export const getEmployeeDetail: RequestHandler = async (req:any, res:any, next:a
     if (!employee) {
       employee = await prisma.employee.findFirst({
         where: {
-          OR: [
-            { employeeCode: { equals: id, mode: "insensitive" } },
-            { id: isUuid ? id : undefined },
-            { userId: isUuid ? id : undefined },
-          ],
+        OR: isUuid
+  ? [
+      { id },
+      { userId: id },
+    ]
+  : []
         },
         include: standardInclude,
       });

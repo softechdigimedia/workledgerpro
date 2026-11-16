@@ -30,7 +30,23 @@ export const validationSchemas = {
   noInput: z.object({}).strict().optional(),
   settings: body({}).refine((v) => Object.keys(v).length > 0, "At least one setting is required"),
   bankAccount: body({ employeeId: id.optional(), accountNumber: optionalText(64), bankName: optionalText(120), ifscCode: optionalText(20), accountHolderName: optionalText(120), employeeAccount: optionalText(120), employeeAccountName: optionalText(120), bankUsername: optionalText(120), bankPassword: optionalText(256), tags, customTags: tags, tag: optionalText(40), customTag: optionalText(40), isPrimary: z.boolean().optional(), bankAccountId: id.optional() }).refine((v) => Boolean(v.bankAccountId) || Boolean(v.accountNumber && v.bankName && v.ifscCode), "Provide bankAccountId or accountNumber, bankName and ifscCode"),
-  bankTags: body({ tag: optionalText(40), customTag: optionalText(40), tags, customTags: tags, append: z.boolean().optional(), mode: z.enum(["append", "replace"]).optional() }).refine((v) => Boolean(v.tag || v.customTag || v.tags?.length || v.customTags?.length), "At least one tag is required"),
+ bankTags: body({
+  tag: optionalText(40),
+  customTag: optionalText(40),
+  tags,
+  customTags: tags,
+  append: z.boolean().optional(),
+  mode: z.enum(["append", "replace"]).optional()
+}).refine(
+  (v) =>
+    Boolean(
+      v.tag ||
+      v.customTag ||
+      (Array.isArray(v.tags) && v.tags.length > 0) ||
+      (Array.isArray(v.customTags) && v.customTags.length > 0)
+    ),
+  "At least one tag is required"
+),
   upiStatus: body({ isUpiActive: z.boolean().optional(), upiStatus: z.enum(["ACTIVE", "INACTIVE"]).optional(), reason: optionalText(500) }).refine((v) => v.isUpiActive !== undefined || v.upiStatus !== undefined, "UPI status is required"),
   primary: body({ employeeId: id.optional() }).optional(),
   bankAccountQuery: query({ employeeId: id.optional() }),

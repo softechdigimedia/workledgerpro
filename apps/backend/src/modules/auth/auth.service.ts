@@ -137,11 +137,32 @@ export const loginUser = async (
   if (reusable) {
     const candidateAccessToken = generateAccessToken(user.id, user.role, reusable.id);
     const candidateRefreshToken = generateRefreshToken(user.id, user.role, reusable.id);
-    const updated = await prisma.refreshSession.updateMany({
-      where: { id: reusable.id, userId: user.id, revokedAt: null, idleAt: null, expiresAt: { gt: now }, lastActivityAt: { gt: new Date(now.getTime() - IDLE_TIMEOUT_MS) } },
-      data: { tokenHash: hashToken(candidateRefreshToken), expiresAt, lastActivityAt: now, idleAt: null,
-        ipAddress: metadata.ipAddress, userAgent: metadata.userAgent },
-    });
+  
+const updated = await prisma.refreshSession.updateMany({
+  where: {
+    id: reusable.id,
+    userId: user.id,
+    revokedAt: null,
+    idleAt: null,
+    expiresAt: { gt: now },
+    lastActivityAt: {
+      gt: new Date(now.getTime() - IDLE_TIMEOUT_MS),
+    },
+  },
+  data: {
+    tokenHash: hashToken(candidateRefreshToken),
+    expiresAt,
+    lastActivityAt: now,
+    idleAt: null,
+    ...(metadata.ipAddress !== undefined
+      ? { ipAddress: metadata.ipAddress }
+      : {}),
+    ...(metadata.userAgent !== undefined
+      ? { userAgent: metadata.userAgent }
+      : {}),
+  },
+});
+
     if (updated.count > 0) {
       sessionId = reusable.id;
       accessToken = candidateAccessToken;
