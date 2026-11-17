@@ -47,7 +47,22 @@ export const validationSchemas = {
     ),
   "At least one tag is required"
 ),
-  upiStatus: body({ isUpiActive: z.boolean().optional(), upiStatus: z.enum(["ACTIVE", "INACTIVE"]).optional(), reason: optionalText(500) }).refine((v) => v.isUpiActive !== undefined || v.upiStatus !== undefined, "UPI status is required"),
+  upiStatus: body({
+  isUpiActive: z.boolean().optional(),
+
+  upiStatus: z.enum([
+    "ACTIVE",
+    "EXHAUSTED",
+    "INACTIVE"
+  ]).optional(),
+
+  reason: optionalText(500)
+}).refine(
+  (v) =>
+    v.isUpiActive !== undefined ||
+    v.upiStatus !== undefined,
+  "UPI status is required"
+),
   primary: body({ employeeId: id.optional() }).optional(),
   bankAccountQuery: query({ employeeId: id.optional() }),
   dateFilter: query({ date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Date must be YYYY-MM-DD").optional() }),
