@@ -57,7 +57,8 @@ export const SubAdminManagement: React.FC = () => {
   }, []);
 
   const handleToggleStatus = async (sa: SubAdminEnriched) => {
-    const nextStatus = sa.status === 'ACTIVE' ? 'DEACTIVATED' : 'ACTIVE';
+    const nextStatus =
+  sa.status === 'ACTIVE' ? 'INACTIVE' : 'ACTIVE';
     try {
       await superAdminApi.toggleUserStatus(sa.id, nextStatus);
       await fetchData();
