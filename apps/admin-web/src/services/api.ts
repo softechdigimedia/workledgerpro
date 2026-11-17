@@ -111,7 +111,10 @@ export const superAdminApi = {
     const res = await apiClient.patch<{ user: User }>(`/super-admin/users/${userId}`, updates);
     return res.data?.user || (res.data as any);
   },
-  toggleUserStatus: async (userId: string, status: 'ACTIVE' | 'DEACTIVATED') => {
+toggleUserStatus: async (
+  userId: string,
+  status: 'ACTIVE' | 'INACTIVE'
+) => {
     const res = await apiClient.patch<{ user: User }>(`/super-admin/users/${userId}/status`, { status });
     return res.data?.user || (res.data as any);
   },
