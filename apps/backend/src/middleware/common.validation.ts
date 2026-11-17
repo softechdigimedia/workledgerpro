@@ -21,7 +21,22 @@ export const validationSchemas = {
   attendance: body({ latitude, longitude, accuracy: z.coerce.number().min(0).max(100_000).optional(), accuracyMeters: z.coerce.number().min(0).max(100_000).optional(), address: optionalText(500), notes: optionalText(1000) }).optional(),
   punch: body({ punchType: z.enum(["CHECK_IN", "CHECK_OUT"]), latitude, longitude, accuracy: z.coerce.number().min(0).max(100_000).optional(), accuracyMeters: z.coerce.number().min(0).max(100_000).optional(), address: optionalText(500), notes: optionalText(1000) }),
   floatRequest: body({ amount: positiveAmount.optional(), requestedAmount: positiveAmount.optional(), reason: optionalText(1000), remarks: optionalText(1000), bankAccount: optionalText(64), bankAccountNumber: optionalText(64) }).refine((v) => v.amount !== undefined || v.requestedAmount !== undefined, "Amount is required"),
-  createUser: body({ name: z.string().trim().min(1).max(120), email: z.string().trim().email().max(254), password: z.string().min(8).max(128).optional(), phone: optionalText(30), region: optionalText(120), subAdminId: id.optional(), role: z.enum(["EMPLOYEE", "SUB_ADMIN", "SUPER_ADMIN"]).optional() }),
+  createUser: body({  name: z.string()
+    .trim()
+    .min(1, "Full name is required")
+    .max(120, "Name cannot exceed 120 characters"),
+
+  email: z.string()
+    .trim()
+    .min(1, "Email address is required")
+    .email("Please enter a valid email address")
+    .max(254, "Email address is too long"),
+
+  password: z.string()
+    .min(8, "Password must contain at least 8 characters")
+    .max(128, "Password cannot exceed 128 characters")
+    .optional(),
+  phone: optionalText(30), region: optionalText(120), subAdminId: id.optional(), role: z.enum(["EMPLOYEE", "SUB_ADMIN", "SUPER_ADMIN"]).optional() }),
   userStatus: body({ status: z.enum(["ACTIVE", "INACTIVE", "SUSPENDED"]) }),
   changePassword: body({ password: z.string().min(8).max(128).optional(), newPassword: z.string().min(8).max(128).optional() }).refine((v) => Boolean(v.password || v.newPassword), "New password is required"),
   assignment: body({ employeeId: id, subAdminId: id }),
