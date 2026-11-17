@@ -324,7 +324,13 @@ export const toggleUserStatus: RequestHandler = async (req:any, res:any, next:an
       return res.status(404).json({ error: "NOT_FOUND", message: "User not found" });
     }
 
-    const newStatus = status === "ACTIVE" ? UserStatus.ACTIVE : UserStatus.INACTIVE;
+   const statusMap = {
+  ACTIVE: UserStatus.ACTIVE,
+  INACTIVE: UserStatus.INACTIVE,
+  SUSPENDED: UserStatus.INACTIVE,
+} as const;
+
+const newStatus = statusMap[status as keyof typeof statusMap];
 
     const updated = await prisma.user.update({
       where: { id },
