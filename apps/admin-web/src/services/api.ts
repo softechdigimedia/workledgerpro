@@ -373,7 +373,7 @@ export const employeeApi = {
   },
   setUpiStatus: async (
     id: string,
-    data: { isUpiActive: boolean; upiStatus?: 'ACTIVE' | 'EXHAUSTED'; reason?: string }
+    data: { isUpiActive: boolean; upiStatus?: 'ACTIVE' | 'EXHAUSTED' | 'INACTIVE'; reason?: string }
   ) => {
     const res = await apiClient.patch(`/employee/bank-accounts/${id}/upi-status`, data);
     return res.data;
@@ -403,7 +403,7 @@ export const bankAccountApi = {
   },
   setUpiStatus: async (
     accountId: string,
-    data: { isUpiActive: boolean; upiStatus?: 'ACTIVE' | 'EXHAUSTED'; reason?: string }
+    data: { isUpiActive: boolean; upiStatus?: 'ACTIVE' | 'EXHAUSTED' | 'INACTIVE'; reason?: string }
   ) => {
     const res = await apiClient.patch(`/bank-accounts/${accountId}/upi-status`, data);
     return res.data;
