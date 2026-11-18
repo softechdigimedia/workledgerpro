@@ -111,7 +111,10 @@ export const superAdminApi = {
     const res = await apiClient.patch<{ user: User }>(`/super-admin/users/${userId}`, updates);
     return res.data?.user || (res.data as any);
   },
-  toggleUserStatus: async (userId: string, status: 'ACTIVE' | 'DEACTIVATED') => {
+toggleUserStatus: async (
+  userId: string,
+  status: 'ACTIVE' | 'INACTIVE'
+) => {
     const res = await apiClient.patch<{ user: User }>(`/super-admin/users/${userId}/status`, { status });
     return res.data?.user || (res.data as any);
   },
@@ -373,7 +376,7 @@ export const employeeApi = {
   },
   setUpiStatus: async (
     id: string,
-    data: { isUpiActive: boolean; upiStatus?: 'ACTIVE' | 'EXHAUSTED'; reason?: string }
+    data: { isUpiActive: boolean; upiStatus?: 'ACTIVE' | 'EXHAUSTED' | 'INACTIVE'; reason?: string }
   ) => {
     const res = await apiClient.patch(`/employee/bank-accounts/${id}/upi-status`, data);
     return res.data;
@@ -403,7 +406,7 @@ export const bankAccountApi = {
   },
   setUpiStatus: async (
     accountId: string,
-    data: { isUpiActive: boolean; upiStatus?: 'ACTIVE' | 'EXHAUSTED'; reason?: string }
+    data: { isUpiActive: boolean; upiStatus?: 'ACTIVE' | 'EXHAUSTED' | 'INACTIVE'; reason?: string }
   ) => {
     const res = await apiClient.patch(`/bank-accounts/${accountId}/upi-status`, data);
     return res.data;

@@ -57,7 +57,8 @@ export const SubAdminManagement: React.FC = () => {
   }, []);
 
   const handleToggleStatus = async (sa: SubAdminEnriched) => {
-    const nextStatus = sa.status === 'ACTIVE' ? 'DEACTIVATED' : 'ACTIVE';
+    const nextStatus =
+  sa.status === 'ACTIVE' ? 'INACTIVE' : 'ACTIVE';
     try {
       await superAdminApi.toggleUserStatus(sa.id, nextStatus);
       await fetchData();
@@ -84,9 +85,20 @@ export const SubAdminManagement: React.FC = () => {
       setNewEmail('');
       setNewRegion('');
       setNewPhone('');
-    } catch (err: any) {
-      alert(err.response?.data?.message || 'Failed to create sub-admin');
-    } finally {
+   } catch (err: any) {
+  const status = err.response?.status;
+
+  if (status === 401) {
+    alert("Please log in again to create a new Subadmin.");
+  } else if (status === 403) {
+    alert("You do not have permission to create a Subadmin.");
+  } else {
+    alert(
+      err.response?.data?.message ||
+      "Unable to create Subadmin. Please try again."
+    );
+  }
+}finally {
       setCreating(false);
     }
   };

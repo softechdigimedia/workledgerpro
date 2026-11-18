@@ -144,11 +144,7 @@ export const Login: React.FC = () => {
           </form>
         </div>
 
-        <div className="mt-4 text-center">
-          <p className="text-xs text-[#877A65]">
-            Protected under Role-Based Access Control (RBAC) &amp; ISO 27001 Security Standard
-          </p>
-        </div>
+  
       </div>
     </div>
   );

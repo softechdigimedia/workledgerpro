@@ -521,10 +521,13 @@ export const toggleUpiStatus: RequestHandler = async (req:any, res:any, next:any
     }
 
     const fallbackAccount = allAccounts[0];
-    if (!matched && fallbackAccount) {
-      targetBankAccountId = fallbackAccount.id;
-      matched = fallbackAccount;
-    }
+  if (!matched) {
+  return res.status(404).json({
+    success: false,
+    error: "NOT_FOUND",
+    message: "Bank account not found."
+  });
+}
 
     let userName = userRole === "SUPER_ADMIN" ? "Super Admin" : "User";
     if (userId) {
